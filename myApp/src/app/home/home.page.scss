@@ -1,0 +1,50 @@
+
+ ion-title
+ {
+     color: rgb(107, 183, 206);
+     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+     ;
+ }
+ .ion-page
+ {
+     background-color: red;
+ }
+ button
+ {
+     width: 70%;
+     height: 40%;
+ }
+ ion-col
+ {
+     padding: 5&;
+ }
+ #header
+ {
+     background-color: rgb(233, 248, 248);
+     border: 1px solid white;
+     border-radius: 13%;
+     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    //  padding: 5px;
+
+ }
+ .pointer:hover
+ {
+     cursor: pointer;
+ }
+ ion-grid
+ {
+     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+     padding: 5px;
+ }
+ ion-col
+ {
+    padding: 5px 7px 0 0;
+ }
+ ion-col #Phone
+ {
+    padding: 5px 7px 0 8px; 
+ }
+ ion-reorder
+ {
+    padding: 5px 7px 0 8px;   
+ }

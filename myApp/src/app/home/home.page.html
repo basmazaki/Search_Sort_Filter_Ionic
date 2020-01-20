@@ -1,0 +1,144 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Basma Zaki
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <!-- https://www.npmjs.com/package/ngx-pagination?fbclid=IwAR1pkSoqqeNmrbijNwVyEhzL4861ED7Rdegnx6oFepQaEawKduOvyjUEHG8 -->
+    <div class="container">
+      <!-- <br><br>
+  <div id="dataTable">
+    <nav class="navbar">
+      <input class="form-control" type="text" name="search by name " [(ngModel)]="searchTerm"
+(Change)="setFilteredItems()"
+        placeholder="search by name ">
+    </nav>
+    <table>
+      <thead>
+        <tr id="head" style="background-color: rgb(2, 2, 95)">
+          <th>#</th>
+          <th scope="col">Name
+
+          </th>
+          <th scope="col">Phone</th>
+          <th scope="col">Status</th>
+          <th scope="col">Email</th>
+
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="let user of ListOfUserToShow ; let i = index">
+          <td>{{i+1}}</td>
+          <td>{{user.Name}}</td>
+          <td>{{user.Phone}}</td>
+          <td>{{user.Status}}</td>
+          <td>{{user.Email}}</td>
+        </tr>
+      </tbody>
+    </table>
+   
+  </div>-->
+
+
+
+
+
+
+
+
+
+
+
+
+      <!--   
+  <ion-searchbar
+[(ngModel)]="searchTerm"
+(ionChange)="setFilteredItems()"
+></ion-searchbar>
+
+<ion-list>
+    <ion-reorder-group (ionItemReorder)="onRenderItems($event)" disabled="false">
+<ion-item *ngFor="let item of ListOfUserToShow">
+    <ion-label>
+        {{item.Name}}
+      </ion-label>
+  <ion-reorder></ion-reorder>
+</ion-item>
+</ion-reorder-group>
+</ion-list>
+<ion-list text-center>
+    <button class="btn btn-outline-info" (click)="getList()">
+      Get Updated List
+    </button>
+  </ion-list> -->
+      <div class="form-group">
+        <div class="row">
+          <!-- <input type="text" [(ngModel)]="searchText" 
+               class="form-control" placeholder="Search ..." /> -->
+          <ion-searchbar [(ngModel)]="searchTerm" (ionChange)="setFilteredItems()" placeholder="Search ..."></ion-searchbar>
+        </div>
+      </div>
+      <ion-grid>
+        <ion-row id="header">
+          <ion-col>
+            <div>
+              <th class="pointer" (click)="sort('ID')">ID</th>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <th class="pointer" (click)="sort('Name')">Name</th>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <th class="pointer" (click)="sort('Phone')">Phone</th>
+            </div>
+          </ion-col>
+<ion-col>
+  <div>
+    <th>order</th>
+  </div>
+</ion-col>
+        </ion-row>
+        <ion-reorder-group (ionItemReorder)="onRenderItems($event)" disabled="false">
+          <ion-row *ngFor="let item of ListOfUserToShow | filterItem : searchText">
+            <ion-col>
+              <div>
+                {{item.ID}}
+
+              </div>
+            </ion-col>
+            <ion-col>
+              <div>
+                {{item.Name}}
+
+              </div>
+            </ion-col>
+            <ion-col >
+              <div id="Phone">
+                {{item.Phone}}
+              </div>
+            </ion-col>
+            <ion-col>
+              <div>
+            <ion-reorder></ion-reorder>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-reorder-group>
+      </ion-grid>
+      <ion-list text-center>
+          <button class="btn btn-outline-info" (click)="getList()">
+            Get Updated List
+          </button>
+        </ion-list>
+    </div>
+  </div>
+</ion-content>
